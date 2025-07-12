@@ -87,6 +87,13 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 
 ---
 
+## 🔗 Live Project
+
+👉 [Play the Memory Card Game](https://shivam-dhyani-memory-card-game.vercel.app/)
+
+---
+
+
 ## ❤️ Acknowledgments
 
 Thanks to the open-source React community for the inspiration behind game mechanics and to all the devs pushing the boundaries of frontend engineering.
