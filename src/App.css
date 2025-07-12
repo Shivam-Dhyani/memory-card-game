@@ -1,0 +1,232 @@
+body {
+  font-family: sans-serif;
+  background: #f2f2f2;
+  text-align: center;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid gray;
+  border-radius: 1.5rem;
+  background: #f2f2f2;
+}
+
+button:hover {
+  background: #e0e0e0;
+}
+
+button:active {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem;
+  font-size: 1.1rem;
+}
+
+.stats p {
+  margin: 0;
+}
+
+select {
+  padding: 0.4rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #aaa;
+  background-color: white;
+  color: black;
+}
+
+select:focus {
+  outline: none;
+  border-color: #666;
+  box-shadow: 0 0 3px rgba(100, 100, 100, 0.6);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.grid-hard {
+  grid-template-columns: repeat(6, 70px);
+}
+
+.grid-hard .card {
+  width: 70px;
+  height: 70px;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.won-message {
+  margin-top: 20px;
+  color: green;
+  font-size: 1.5rem;
+}
+
+/* Media Query */
+@media (max-width: 600px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  label {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  label span {
+    margin-left: 1rem;
+  }
+
+  select {
+    width: 75%;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.3rem 0.8rem;
+  }
+  .grid {
+    grid-template-columns: repeat(4, 60px);
+    gap: 6px;
+  }
+
+  .grid-hard {
+    grid-template-columns: repeat(6, 50px);
+  }
+
+  .card {
+    width: 60px;
+    height: 60px;
+  }
+
+  .grid-hard .card {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card-front,
+  .card-back {
+    font-size: 1.5rem;
+  }
+}
+
+/* Dark Mode CSS */
+body.dark-mode {
+  background: #1e1e1e;
+  color: #f5f5f5;
+}
+
+body.dark-mode .card-front,
+body.dark-mode .card-back {
+  background: #333;
+  color: #f5f5f5;
+}
+
+body.dark-mode button {
+  background: #2c2c2c;
+  color: #fff;
+  border-color: #444;
+}
+
+body.dark-mode button:hover {
+  background: #444;
+}
+
+body.dark-mode .title {
+  color: #fff;
+}
+
+body.dark-mode .won-message {
+  color: #7fff7f;
+}
+
+body.dark-mode select {
+  background-color: #2c2c2c;
+  color: #f5f5f5;
+  border-color: #555;
+}
+
+body.dark-mode option {
+  background-color: #2c2c2c;
+  color: #f5f5f5;
+}
+
+body.dark-mode select:focus {
+  border-color: #999;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
+}
