@@ -1,4 +1,4 @@
-# Assignmnet Task - 🧠 Memory Card Game
+# 🧠 Memory Card Game
 
 The Memory Card Game is a web-based React application designed to test and train your short-term memory. Flip cards, find matching pairs, and beat your best score — all while enjoying light and dark themes for a better user experience.
 
