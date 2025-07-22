@@ -15,8 +15,8 @@ const MemoryCardGame = () => {
   const [hasWon, setHasWon] = useState(false);
   const [gameStarted, setGameStarted] = useState(false);
 
-  const { seconds, reset: resetTimer } = useTimer(gameStarted);
-  const bestScore = useBestScore(difficulty, seconds, hasWon);
+  const { formattedTime, reset: resetTimer } = useTimer(gameStarted);
+  const { formatted } = useBestScore(difficulty, formattedTime, hasWon);
   const { isDark, toggle } = useDarkMode();
 
   const generateDeck = (difficulty) => {
@@ -98,8 +98,8 @@ const MemoryCardGame = () => {
 
       <div className="stats">
         <p>Moves: {moves}</p>
-        <p>⏱ Time: {seconds}s</p>
-        {bestScore !== null && <p>🏆 Best: {bestScore}s</p>}
+        <p>⏱ Time: {formattedTime}</p>
+        {formatted !== null && <p>🏆 Best: {formatted}</p>}
       </div>
 
       <div className={`grid ${difficulty === "hard" ? "grid-hard" : ""}`}>
@@ -108,7 +108,9 @@ const MemoryCardGame = () => {
         ))}
       </div>
 
-      {hasWon && <h2 className="won-message">🎉 You Won in {seconds}s!</h2>}
+      {hasWon && (
+        <h2 className="won-message">🎉 You Won in {formattedTime}!</h2>
+      )}
     </div>
   );
 };
