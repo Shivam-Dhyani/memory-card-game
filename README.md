@@ -64,7 +64,8 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 
 ## 📸 Screenshot
 
-<img width="742" height="757" alt="image" src="https://github.com/user-attachments/assets/94d2e3ea-f89c-4a5b-9c94-7c39f2fe2dca" />
+<img width="725" height="750" alt="image" src="https://github.com/user-attachments/assets/724b1d5c-185a-4845-b38c-6958255d0eb7" />
+
 
 ---
 
